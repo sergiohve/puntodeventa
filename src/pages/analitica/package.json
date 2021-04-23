@@ -1,0 +1,11 @@
+{
+  "name": "Analitica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Analitica.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

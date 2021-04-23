@@ -3,15 +3,18 @@ import { fade } from "@material-ui/core/styles/colorManipulator";
 
 export default makeStyles(theme => ({
   logotype: {
-    color: "white",
-    marginLeft: theme.spacing(2.5),
-    marginRight: theme.spacing(2.5),
+    color: "black",
+  
     fontWeight: 500,
     fontSize: 18,
     whiteSpace: "nowrap",
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
+  },
+  logo: {
+    width: "100px",
+    height: "60px"
   },
   appBar: {
     width: "100vw",
@@ -20,10 +23,13 @@ export default makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    color: "black"
   },
   toolbar: {
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
+    background: "white", 
+    color: "black"
   },
   hide: {
     display: "none",
@@ -102,17 +108,22 @@ export default makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       marginLeft: 0
     },
+    color: "black",
     padding: theme.spacing(0.5),
   },
   headerMenuButtonCollapse: {
+    color: "black",
     marginRight: theme.spacing(2),
   },
   headerIcon: {
     fontSize: 28,
+    color: "black",
     color: "rgba(255, 255, 255, 0.35)",
+    marginLeft: "9px"
   },
   headerIconCollapse: {
-    color: "white",
+    color: "black",
+    marginLeft: "20px"
   },
   profileMenu: {
     minWidth: 265,

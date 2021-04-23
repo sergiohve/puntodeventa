@@ -1,0 +1,11 @@
+{
+  "name": "Ventas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Ventas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

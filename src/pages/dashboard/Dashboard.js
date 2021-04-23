@@ -427,7 +427,7 @@ export default function Dashboard(props) {
   );
 }
 
-// #######################################################################
+
 function getRandomData(length, min, max, multiplier = 10, maxDiff = 10) {
   var array = new Array(length).fill();
   let lastValue;

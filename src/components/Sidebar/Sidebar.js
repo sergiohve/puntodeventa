@@ -9,12 +9,32 @@ import {
   QuestionAnswer as SupportIcon,
   LibraryBooks as LibraryIcon,
   HelpOutline as FAQIcon,
-  ArrowBack as ArrowBackIcon,
+  Menu as MenuIcon,
+  ShoppingCart as cart,
 } from "@material-ui/icons";
+import Button from '@material-ui/core/Button';
+import {
+  Link
+} from "react-router-dom";
+
+
 import { useTheme } from "@material-ui/styles";
 import { withRouter } from "react-router-dom";
 import classNames from "classnames";
-
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
+import CallReceivedIcon from '@material-ui/icons/CallReceived';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import HomeWorkIcon from '@material-ui/icons/HomeWork';
+import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
+import AssessmentIcon from '@material-ui/icons/Assessment';
+import SettingsIcon from '@material-ui/icons/Settings';
+import PowerIcon from '@material-ui/icons/Power';
+import HelpIcon from '@material-ui/icons/Help';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 // styles
 import useStyles from "./styles";
 
@@ -29,57 +49,74 @@ import {
   toggleSidebar,
 } from "../../context/LayoutContext";
 
-const structure = [
-  { id: 0, label: "Dashboard", link: "/app/dashboard", icon: <HomeIcon /> },
+const estructura = [
+  { 
+    id: 0, label: "Punto de venta", 
+    link: "/app/puntodeventa", 
+    icon: <ShoppingCartIcon /> 
+},
   {
     id: 1,
-    label: "Typography",
-    link: "/app/typography",
-    icon: <TypographyIcon />,
+    label: "Emitidos",
+    link: "/app/emitidos",
+    icon: <InsertDriveFileIcon />,
   },
-  { id: 2, label: "Tables", link: "/app/tables", icon: <TableIcon /> },
+  { 
+    id: 2, 
+    label: "Recibidos", 
+    link: "/app/recibidos", 
+    icon: <CallReceivedIcon /> },
   {
     id: 3,
-    label: "Notifications",
-    link: "/app/notifications",
-    icon: <NotificationsIcon />,
+    label: "Borradores",
+    link: "/app/borradores",
+    icon: <DraftsIcon />,
+  },
+   {
+    id: 4,
+    label: "Stock",
+    link: "/app/stock",
+    icon: <HomeWorkIcon />,
   },
   {
-    id: 4,
-    label: "UI Elements",
-    link: "/app/ui",
-    icon: <UIElementsIcon />,
-    children: [
-      { label: "Icons", link: "/app/ui/icons" },
-      { label: "Charts", link: "/app/ui/charts" },
-      { label: "Maps", link: "/app/ui/maps" },
-    ],
+    id: 5,
+    label: "Envios",
+    link: "/app/envios",
+    icon: <LocalShippingIcon />,
   },
-  { id: 5, type: "divider" },
-  { id: 6, type: "title", label: "HELP" },
-  { id: 7, label: "Library", link: "https://flatlogic.com/templates", icon: <LibraryIcon /> },
-  { id: 8, label: "Support", link: "https://flatlogic.com/forum", icon: <SupportIcon /> },
-  { id: 9, label: "FAQ", link: "https://flatlogic.com/forum", icon: <FAQIcon /> },
   { id: 10, type: "divider" },
-  { id: 11, type: "title", label: "PROJECTS" },
+  { id: 11, type: "title", label: "Registros"},
   {
     id: 12,
-    label: "My recent",
-    link: "",
-    icon: <Dot size="small" color="warning" />,
+    label: "Ventas",
+    link: "/app/ventas",
+    icon: <MonetizationOnIcon />,
   },
   {
     id: 13,
-    label: "Starred",
-    link: "",
-    icon: <Dot size="small" color="primary" />,
+    label: "Compras",
+    link: "/app/compras",
+    icon: <ShoppingBasketIcon/>,
   },
   {
     id: 14,
-    label: "Background",
-    link: "",
-    icon: <Dot size="small" color="secondary" />,
+    label: "Guias de despacho",
+    link: "/app/despacho",
+    icon: <EmojiTransportationIcon />,
   },
+  {
+    id: 15,
+    label: "Analitica",
+    link: "/app/analitica",
+    icon: <AssessmentIcon />,
+  },
+  {
+    id: 16,
+    label: "Configuración",
+    link: "/app/configuracion",
+    icon: <SettingsIcon />,
+  },
+
 ];
 
 function Sidebar({ location }) {
@@ -89,6 +126,11 @@ function Sidebar({ location }) {
   // global
   var { isSidebarOpened } = useLayoutState();
   var layoutDispatch = useLayoutDispatch();
+
+  var layoutState = useLayoutState();
+  
+ 
+
 
   // local
   var [isPermanent, setPermanent] = useState(true);
@@ -119,15 +161,21 @@ function Sidebar({ location }) {
       <div className={classes.toolbar} />
       <div className={classes.mobileBackButton}>
         <IconButton onClick={() => toggleSidebar(layoutDispatch)}>
-          <ArrowBackIcon
-            classes={{
-              root: classNames(classes.headerIcon, classes.headerIconCollapse),
-            }}
-          />
+          <MenuIcon
+              classes={{
+                root: classNames(
+                  classes.headerIcon,
+                  classes.headerIconCollapse,
+                ),
+              }}
+            />
+
+
+          
         </IconButton>
       </div>
       <List className={classes.sidebarList}>
-        {structure.map(link => (
+        {estructura.map(link => (
           <SidebarLink
             key={link.id}
             location={location}
@@ -135,11 +183,59 @@ function Sidebar({ location }) {
             {...link}
           />
         ))}
+        
       </List>
+
+       <IconButton
+          style={{color: "black"}}
+          onClick={() => toggleSidebar(layoutDispatch)}
+          className={classNames(
+            classes.headerMenuButtonSandwich,
+            classes.headerMenuButtonCollapse,
+          )}
+        >
+          {layoutState.isSidebarOpened ? (
+            <Button variant="contained" color="primary" className={classes.boton}>
+        <PowerIcon/>Integraciones
+        </Button>
+          ) : (
+           <Button variant="contained" color="primary" className={classes.boton}>
+        <PowerIcon/>
+        </Button>
+          )}
+        </IconButton>
+
+
+        <IconButton
+          style={{color: "black"}}
+          onClick={() => toggleSidebar(layoutDispatch)}
+          className={classNames(
+            classes.headerMenuButtonSandwich,
+            classes.headerMenuButtonCollapse,
+          )}
+        >
+          {layoutState.isSidebarOpened ? (
+            <Button variant="contained" className={classes.boton1}>
+        <HelpIcon/>Contactar con Soporte
+        </Button>
+          ) : (
+          <Button variant="contained" className={classes.boton1}>
+        <HelpIcon/>
+        </Button>
+          )}
+        </IconButton>
+  <div><hr/></div>
+   
+
+      
+
+        
+  
+   
     </Drawer>
   );
 
-  // ##################################################################
+
   function handleWindowWidthChange() {
     var windowWidth = window.innerWidth;
     var breakpointWidth = theme.breakpoints.values.md;

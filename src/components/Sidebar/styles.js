@@ -39,6 +39,40 @@ export default makeStyles(theme => ({
       display: "none",
     },
   },
+  boton: {
+    width: "180px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    fontSize: "10px"
+  },
+   boton1: {
+    width: "180px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "10px",
+    color: "blue",
+    fontSize: "10px",
+    background: "#DCEDF6"
+  },
+  link: {
+    textDecoration: "none",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "5px",
+    fontSize: "20px",
+    color: "#939698",
+     "&:hover, &:focus": {
+      backgroundColor: theme.palette.background.light,
+    },
+
+  },
+  icon: {
+    
+    display: "inline-block",
+    
+  },
+
+
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),

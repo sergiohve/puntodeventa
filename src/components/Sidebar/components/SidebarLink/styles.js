@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/styles";
 export default makeStyles(theme => ({
   link: {
     textDecoration: "none",
+    borderRadius: "20px 0px 0px 20px",
+    marginLeft: "10px",
     "&:hover, &:focus": {
       backgroundColor: theme.palette.background.light,
     },

@@ -1,0 +1,11 @@
+{
+  "name": "Compras",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Compras.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

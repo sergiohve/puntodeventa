@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function Tables() {
+export default function Stock() {
   const classes = useStyles();
   return (
     <>

@@ -27,6 +27,7 @@ import useStyles from "./styles";
 import { Badge, Typography, Button } from "../Wrappers";
 import Notification from "../Notification/Notification";
 import UserAvatar from "../UserAvatar/UserAvatar";
+import logo from '../../images/logopunto.png';
 
 // context
 import {
@@ -109,7 +110,7 @@ export default function Header(props) {
     <AppBar position="fixed" className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
         <IconButton
-          color="inherit"
+          style={{color: "black"}}
           onClick={() => toggleSidebar(layoutDispatch)}
           className={classNames(
             classes.headerMenuButtonSandwich,
@@ -117,7 +118,7 @@ export default function Header(props) {
           )}
         >
           {layoutState.isSidebarOpened ? (
-            <ArrowBackIcon
+             <MenuIcon
               classes={{
                 root: classNames(
                   classes.headerIcon,
@@ -137,10 +138,11 @@ export default function Header(props) {
           )}
         </IconButton>
         <Typography variant="h6" weight="medium" className={classes.logotype}>
-          React Material Admin
+          <img src={logo} className={classes.logo}/>
+
         </Typography>
         <div className={classes.grow} />
-        <Button component={Link} href="https://flatlogic.com/templates/react-material-admin-full" variant={"outlined"} color={"secondary"} className={classes.purchaseBtn}>Unlock full version</Button>
+       
         <div
           className={classNames(classes.search, {
             [classes.searchFocused]: isSearchOpen,
@@ -163,7 +165,7 @@ export default function Header(props) {
           />
         </div>
         <IconButton
-          color="inherit"
+          color="success"
           aria-haspopup="true"
           aria-controls="mail-menu"
           onClick={e => {
@@ -174,13 +176,13 @@ export default function Header(props) {
         >
           <Badge
             badgeContent={isNotificationsUnread ? notifications.length : null}
-            color="warning"
+            color="primary"
           >
             <NotificationsIcon classes={{ root: classes.headerIcon }} />
           </Badge>
         </IconButton>
         <IconButton
-          color="inherit"
+          color="success"
           aria-haspopup="true"
           aria-controls="mail-menu"
           onClick={e => {
@@ -289,15 +291,15 @@ export default function Header(props) {
         >
           <div className={classes.profileMenuUser}>
             <Typography variant="h4" weight="medium">
-              John Smith
+              Sergio Herrera
             </Typography>
             <Typography
               className={classes.profileMenuLink}
               component="a"
               color="primary"
-              href="https://flatlogic.com"
+              
             >
-              Flalogic.com
+             Administrador
             </Typography>
           </div>
           <MenuItem
@@ -306,7 +308,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Profile
+            <AccountIcon className={classes.profileMenuIcon} /> Ver perfil
           </MenuItem>
           <MenuItem
             className={classNames(
@@ -314,7 +316,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Tasks
+            <AccountIcon className={classes.profileMenuIcon} /> Contactar con soporte
           </MenuItem>
           <MenuItem
             className={classNames(
@@ -322,7 +324,15 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Messages
+            <AccountIcon className={classes.profileMenuIcon} /> Pago de Servicios
+          </MenuItem>
+          <MenuItem
+            className={classNames(
+              classes.profileMenuItem,
+              classes.headerMenuItem,
+            )}
+          >
+            <AccountIcon className={classes.profileMenuIcon} /> Sugerir Cambios
           </MenuItem>
           <div className={classes.profileMenuUser}>
             <Typography
@@ -330,7 +340,7 @@ export default function Header(props) {
               color="primary"
               onClick={() => signOut(userDispatch, props.history)}
             >
-              Sign Out
+             Cerrar Sesión
             </Typography>
           </div>
         </Menu>
