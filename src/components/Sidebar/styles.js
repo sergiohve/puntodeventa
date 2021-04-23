@@ -49,10 +49,20 @@ export default makeStyles(theme => ({
     width: "180px",
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: "10px",
     color: "blue",
     fontSize: "10px",
     background: "#DCEDF6"
+  },
+  boton2: {
+    width: "180px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    color: "black",
+    fontSize: "10px",
+    background: "#DCEDF6",
+    
+   
+    color: "#aaa"
   },
   link: {
     textDecoration: "none",

@@ -81,15 +81,7 @@ export default function Charts(props) {
 
   return (
     <>
-      <PageTitle title="Charts Page - Data Display" button={
-        <Button
-          variant="contained"
-          size="medium"
-          color="secondary"
-        >
-          Latest Reports
-        </Button>
-      } />
+      
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <Widget title="Apex Line Chart" upperTitle noBodyPadding>

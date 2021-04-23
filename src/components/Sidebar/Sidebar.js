@@ -188,7 +188,7 @@ function Sidebar({ location }) {
 
        <IconButton
           style={{color: "black"}}
-          onClick={() => toggleSidebar(layoutDispatch)}
+         
           className={classNames(
             classes.headerMenuButtonSandwich,
             classes.headerMenuButtonCollapse,
@@ -208,7 +208,7 @@ function Sidebar({ location }) {
 
         <IconButton
           style={{color: "black"}}
-          onClick={() => toggleSidebar(layoutDispatch)}
+         
           className={classNames(
             classes.headerMenuButtonSandwich,
             classes.headerMenuButtonCollapse,
@@ -225,6 +225,24 @@ function Sidebar({ location }) {
           )}
         </IconButton>
   <div><hr/></div>
+   <IconButton
+          style={{color: "black"}}
+         
+          className={classNames(
+            classes.headerMenuButtonSandwich,
+            classes.headerMenuButtonCollapse,
+          )}
+        >
+          {layoutState.isSidebarOpened ? (
+            <div >
+        <ExitToAppIcon/>Cerrar sesión
+        </div>
+          ) : (
+          <div >
+        <ExitToAppIcon/>
+        </div>
+          )}
+        </IconButton>
    
 
       

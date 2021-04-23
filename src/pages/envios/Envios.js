@@ -41,7 +41,7 @@ export default function Envios() {
   const classes = useStyles();
   return (
     <>
-      <PageTitle title="Tables" />
+      
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <MUIDataTable

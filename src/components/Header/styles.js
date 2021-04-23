@@ -16,6 +16,12 @@ export default makeStyles(theme => ({
     width: "100px",
     height: "60px"
   },
+  root: {
+    display: 'flex',
+  },
+  paper: {
+    marginRight: theme.spacing(2),
+  },
   appBar: {
     width: "100vw",
     zIndex: theme.zIndex.drawer + 1,

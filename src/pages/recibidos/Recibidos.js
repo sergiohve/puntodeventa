@@ -24,18 +24,18 @@ import Paper from '@material-ui/core/Paper';
 import mock from "../dashboard/mock";
 
 const datatableData = [
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,   <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>,<div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Bob Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div> ,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>James Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#d20404", borderRadius: "2px"}}>Cancelado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Troi Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Samuel Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Mike Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Sonia Sanders</div>Nº4256373</div>,   <div style={{color: "#3A6582"}}><div>Factura electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#d20404", borderRadius: "2px"}}>Cancelado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#fbae06", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Factura electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
-  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>, <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,   <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>,<div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Bob Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div> ,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>James Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#d20404", borderRadius: "2px", width: "75px"}}>Cancelado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Troi Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Samuel Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Mike Sanders</div>Nº4256373</div>,    <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Sonia Sanders</div>Nº4256373</div>,   <div style={{color: "#3A6582"}}><div>Factura electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#d20404", borderRadius: "2px", width: "75px"}}>Cancelado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Nota de credito electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#fbae06", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Factura electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>,  <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
+  [<div style={{color: "#3A6582"}}><div style={{fontWeight: "bold"}}>Joe Sanders</div>Nº4256373</div>, <div style={{color: "#3A6582"}}><div>Boleta electrónica</div>Nº645633</div>,  <div style={{color: "#3A6582"}}><div>25 de enero 2021</div>17:15</div>, <div style={{color: "white", background: "#1abc9c", borderRadius: "2px", width: "75px"}}>Aprobado</div>, <div style={{color: "#3A6582"}}>349,60</div>],
   
 ];
 function createData(name, calories, fat, carbs, protein) {
@@ -60,14 +60,14 @@ export default function Recibidos() {
       <Grid container spacing={4}>
       <Grid item xs={12}>
           
-            <TableContainer component={Paper}>
-      <Table className={classes.table} size="small" aria-label="a dense table">
+            <TableContainer component={Paper} className="table table-bordered" >
+      <Table className={classes.table} size="small" aria-label="a dense table" style={{margin: "15px", width: "98%", textAlign: "center"}}>
         <TableHead>
           <TableRow>
-            <TableCell>Buscar pedidos</TableCell>
-            <TableCell align="right"><CalendarTodayIcon/> Seleccionar fecha <ArrowDropDownIcon/></TableCell>
-            <TableCell align="right"></TableCell>
-            <TableCell align="right">Tipo de documento <ArrowDropDownIcon/></TableCell>
+            <TableCell align="center">Buscar pedidos</TableCell>
+            <TableCell align="center"><CalendarTodayIcon/> Seleccionar fecha <ArrowDropDownIcon/></TableCell>
+            
+            <TableCell align="center">Tipo de documento <ArrowDropDownIcon/></TableCell>
            
           </TableRow>
         </TableHead>
@@ -77,7 +77,12 @@ export default function Recibidos() {
          
         </TableBody>
       </Table>
+      <div style={{marginLeft: "15px"}}>357 Recibidos<div style={{marginRight: "15px", float: "right"}}>Borrar filtros</div></div>
     </TableContainer>
+
+
+
+    
 
           
         </Grid>

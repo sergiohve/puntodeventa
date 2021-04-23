@@ -308,7 +308,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Ver perfil
+            Ver perfil <AccountIcon className={classes.profileMenuIcon} />
           </MenuItem>
           <MenuItem
             className={classNames(
@@ -316,7 +316,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Contactar con soporte
+            Contactar con soporte <AccountIcon className={classes.profileMenuIcon} />
           </MenuItem>
           <MenuItem
             className={classNames(
@@ -324,7 +324,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Pago de Servicios
+             Pago de Servicios <AccountIcon className={classes.profileMenuIcon} />
           </MenuItem>
           <MenuItem
             className={classNames(
@@ -332,7 +332,7 @@ export default function Header(props) {
               classes.headerMenuItem,
             )}
           >
-            <AccountIcon className={classes.profileMenuIcon} /> Sugerir Cambios
+             Sugerir Cambios <AccountIcon className={classes.profileMenuIcon} />
           </MenuItem>
           <div className={classes.profileMenuUser}>
             <Typography

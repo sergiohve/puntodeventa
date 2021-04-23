@@ -34,7 +34,7 @@ export default function NotificationsPage(props) {
 
   return (
     <>
-      <PageTitle title="Notifications" />
+     
       <Grid container spacing={4}>
         <ToastContainer
           className={classes.toastsContainer}
