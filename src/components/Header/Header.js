@@ -22,6 +22,7 @@ import classNames from "classnames";
 
 // styles
 import useStyles from "./styles";
+import Search from "./Search";
 
 // components
 import { Badge, Typography, Button } from "../Wrappers";
@@ -141,29 +142,41 @@ export default function Header(props) {
           <img src={logo} className={classes.logo}/>
 
         </Typography>
+       
+
+
+
+
+
+
         <div className={classes.grow} />
        
-        <div
-          className={classNames(classes.search, {
-            [classes.searchFocused]: isSearchOpen,
-          })}
+        <div style={{marginRight: "400px", width: "600px"}}>
+   <div className="input-group">
+  <input type="search" className="form-control rounded" placeholder="Busque su documento" aria-label="Search"
+    aria-describedby="search-addon" />
+  <button type="button" className="btn btn-primary">Buscar</button>
+</div>
+</div>
+
+
+
+
+
+        <IconButton
+          color="success"
+          aria-haspopup="true"
+          aria-controls="mail-menu"
+          onClick={e => {
+            setMailMenu(e.currentTarget);
+            setIsMailsUnread(false);
+          }}
+          className={classes.headerMenuButton}
         >
-          <div
-            className={classNames(classes.searchIcon, {
-              [classes.searchIconOpened]: isSearchOpen,
-            })}
-            onClick={() => setSearchOpen(!isSearchOpen)}
-          >
-            <SearchIcon classes={{ root: classes.headerIcon }} />
-          </div>
-          <InputBase
-            placeholder="Search…"
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
-          />
-        </div>
+         
+          <Button style={{background: "#1abc9c", color: "white"}}>Emitir+</Button>
+          
+        </IconButton>
         <IconButton
           color="success"
           aria-haspopup="true"
@@ -181,23 +194,7 @@ export default function Header(props) {
             <NotificationsIcon classes={{ root: classes.headerIcon }} />
           </Badge>
         </IconButton>
-        <IconButton
-          color="success"
-          aria-haspopup="true"
-          aria-controls="mail-menu"
-          onClick={e => {
-            setMailMenu(e.currentTarget);
-            setIsMailsUnread(false);
-          }}
-          className={classes.headerMenuButton}
-        >
-          <Badge
-            badgeContent={isMailsUnread ? messages.length : null}
-            color="secondary"
-          >
-            <MailIcon classes={{ root: classes.headerIcon }} />
-          </Badge>
-        </IconButton>
+        
         <IconButton
           aria-haspopup="true"
           color="inherit"

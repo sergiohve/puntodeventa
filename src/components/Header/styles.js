@@ -124,7 +124,7 @@ export default makeStyles(theme => ({
   headerIcon: {
     fontSize: 28,
     color: "black",
-    color: "rgba(255, 255, 255, 0.35)",
+    
     marginLeft: "9px"
   },
   headerIconCollapse: {
@@ -141,13 +141,15 @@ export default makeStyles(theme => ({
   },
   profileMenuItem: {
     color: theme.palette.text.hint,
+
   },
   profileMenuIcon: {
     marginRight: theme.spacing(2),
     color: theme.palette.text.hint,
     '&:hover': {
       color: theme.palette.primary.main,
-    }
+    },
+    float: "right"
   },
   profileMenuLink: {
     fontSize: 16,
@@ -155,6 +157,7 @@ export default makeStyles(theme => ({
     "&:hover": {
       cursor: "pointer",
     },
+    float: "right"
   },
   messageNotification: {
     height: "auto",

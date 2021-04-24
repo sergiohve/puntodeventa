@@ -234,11 +234,11 @@ function Sidebar({ location }) {
           )}
         >
           {layoutState.isSidebarOpened ? (
-            <div >
+            <div style={{fontSize: "18px"}} >
         <ExitToAppIcon/>Cerrar sesión
         </div>
           ) : (
-          <div >
+          <div style={{fontSize: "18px"}}>
         <ExitToAppIcon/>
         </div>
           )}
